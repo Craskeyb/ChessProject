@@ -2,6 +2,7 @@
 
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPDF, renderPM
+import chess.svg
 
 def randPos(userGame):
 
