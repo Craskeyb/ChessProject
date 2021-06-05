@@ -3,23 +3,19 @@
 #Utilized python-chess library (listed in requirements.txt file)#
 
 import chess
-import chess.pgn
-import chess.svg
 
+import chess.svg
+from pgnReader import gameRead
+import randPos
 
 print("Welcome to the Chess Recall Program!")
 print("\n-------------------------------------")
-filename = input("\nPlease enter the name of your PGN file (without the .pgn at the end): ")
 
-filename = f"{filename}.pgn"
+gameList = gameRead()
 
-pgn = open(filename)
 
-game = chess.pgn.read_game(pgn)
 
-board = game.board()
 
-image = chess.svg.piece(chess.Piece.from_symbol("R"))
 
 
 
