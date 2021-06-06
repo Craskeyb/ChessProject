@@ -1,9 +1,14 @@
 #File containing the function that will pick a random position and produce a PNG file of it#
 
-from svglib.svglib import svg2rlg
-from reportlab.graphics import renderPDF, renderPM
+import cairosvg
+import chess
+import chess.pgn
 import chess.svg
 
-def randPos(userGame):
+def posPic(gameList):
 
-    print("working on it")
+    game = gameList[0]
+    board = game.board()
+
+
+  
