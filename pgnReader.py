@@ -38,7 +38,7 @@ def gameRead():
             continue
         else:
             print("\nSuccess! Game added to collection")
-            gameList.append(chess.pgn.read_game(pgn))
+            gameList.append(game)
             fileList.append(filename)
     
     
@@ -72,8 +72,10 @@ def gameRead():
                 continue
             else:
                 print("\nSuccess! Game added to collection")
-                gameList.append(chess.pgn.read_game(pgn))
+                gameList.append(game)
                 fileList.append(filename)
                 continue
+    
+    #After we load in our games, we need to convert the pgn's into FEN format
         else:
             return gameList
